@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import './reset.css';
 import './globals.css';
 
 import { Kanit, Inter } from 'next/font/google';
+import NavBar from './components/NavBar/NavBar';
 
 const kanit = Kanit({
   variable: '--font-kanit',
@@ -12,7 +14,7 @@ const kanit = Kanit({
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin-ext'],
-  weight: ['100', '900'],
+  weight: ['100', '300'],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${kanit.variable} ${inter.variable}`}>{children}</body>
+      <body className={`${kanit.variable} ${inter.variable}`}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
