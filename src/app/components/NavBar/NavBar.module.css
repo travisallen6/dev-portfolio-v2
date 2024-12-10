@@ -1,0 +1,88 @@
+.navbar__container {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: var(--color-background);
+  /* gap: 3.5rem; */
+  transition: padding 0.3s ease-in-out;
+}
+
+.navbar__container_top {
+  padding: 2rem 2rem;
+}
+
+.navbar__container_scrolled {
+  padding: 1rem 2rem;
+}
+
+.navbar__container li {
+  list-style: none;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  visibility: hidden;
+}
+
+.navbar__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4rem;
+  width: fit-content;
+}
+
+.navbar__items {
+  display: flex;
+  gap: 4rem;
+}
+
+.navbar__icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+  width: fit-content;
+}
+
+.navbar__icons li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__icons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--color-primary);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__right {
+    gap: 2rem;
+  }
+
+  .navbar__items {
+    gap: 1.5rem;
+  }
+
+  .navbar__icons {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .navbar__items {
+    display: none;
+  }
+
+  .navbar__left {
+    visibility: visible;
+  }
+}

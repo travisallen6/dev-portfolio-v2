@@ -1,0 +1,14 @@
+.navlink {
+  color: var(--color-primary);
+  font-weight: 300;
+  font-family: var(--font-inter);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.navlink svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--color-primary);
+}
