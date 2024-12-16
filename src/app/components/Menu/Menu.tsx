@@ -8,7 +8,7 @@ import { internalNavigationItems } from '../../common/config';
 import MenuLink from '../MenuLink/MenuLink';
 
 export default function Menu() {
-  const [isSideNavOpen, setIsSideNavOpen] = useState(true);
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
 
   const menuNavClassName = isSideNavOpen
     ? `${styles.menu__nav} ${styles.menu__nav_open}`

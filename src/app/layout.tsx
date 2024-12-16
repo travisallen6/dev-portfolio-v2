@@ -8,7 +8,7 @@ import NavBar from './components/NavBar/NavBar';
 const kanit = Kanit({
   variable: '--font-kanit',
   subsets: ['latin-ext'],
-  weight: ['100'],
+  weight: ['100', '400'],
 });
 
 const inter = Inter({
