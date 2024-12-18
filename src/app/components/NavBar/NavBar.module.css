@@ -8,8 +8,8 @@
   left: 0;
   width: 100vw;
   background-color: var(--color-background);
-  /* gap: 3.5rem; */
   transition: padding 0.3s ease-in-out;
+  z-index: 100;
 }
 
 .navbar__container_top {

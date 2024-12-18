@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap-reverse;
+  min-height: 100vh;
 }
 
 .landing__intro {
@@ -34,13 +35,19 @@
   margin-bottom: 3rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .landing {
+    flex-direction: column-reverse;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .landing__intro {
-    width: 100%;
+    width: 80vw;
   }
 
   .landing__portrait {
-    width: 100%;
+    width: 80vw;
   }
 
   .landing__title {
@@ -53,9 +60,6 @@
 }
 
 @media screen and (max-width: 460px) {
-  .landing {
-    /* max-width: 80%; */
-  }
   .landing__title {
     font-size: 2rem;
   }

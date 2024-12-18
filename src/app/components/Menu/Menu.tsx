@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from './Menu.module.css';
 import MenuOpenIcon from '../icons/MenuOpenIcon';
 import MenuCloseIcon from '../icons/MenuCloseIcon';
-import { internalNavigationItems } from '../../common/config';
+import { getInternalNavigationItems } from '../../common/config';
 import MenuLink from '../MenuLink/MenuLink';
 
 export default function Menu() {
@@ -13,6 +14,8 @@ export default function Menu() {
   const menuNavClassName = isSideNavOpen
     ? `${styles.menu__nav} ${styles.menu__nav_open}`
     : styles.menu__nav;
+
+  const currentPathname = usePathname();
 
   return (
     <>
@@ -33,15 +36,17 @@ export default function Menu() {
           <MenuCloseIcon />
         </button>
         <ul>
-          {internalNavigationItems.map(({ href, text, icon }) => (
-            <MenuLink
-              key={href}
-              href={href}
-              text={text}
-              icon={icon}
-              closeMenu={() => setIsSideNavOpen(false)}
-            />
-          ))}
+          {getInternalNavigationItems(currentPathname).map(
+            ({ href, text, icon }) => (
+              <MenuLink
+                key={href}
+                href={href}
+                text={text}
+                icon={icon}
+                closeMenu={() => setIsSideNavOpen(false)}
+              />
+            )
+          )}
         </ul>
       </nav>
     </>

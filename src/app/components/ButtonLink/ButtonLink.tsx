@@ -12,8 +12,8 @@ interface ButtonLinkProps {
 export default function ButtonLink({
   href,
   text,
-  type,
-  color,
+  type = 'filled',
+  color = 'primary',
 }: ButtonLinkProps) {
   const className = applyStyles({
     [styles.buttonlink]: true,

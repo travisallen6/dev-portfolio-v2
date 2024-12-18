@@ -1,3 +1,7 @@
+.menulink {
+  margin-bottom: 1.2rem;
+}
+
 .menulink a {
   display: flex;
   align-items: center;

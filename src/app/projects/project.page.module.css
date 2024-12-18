@@ -1,0 +1,16 @@
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 600px));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.projects__container h1 {
+  grid-column: 1 / -1;
+}
+
+@media screen and (max-width: 1200px) {
+  .projects__container {
+    grid-template-columns: minmax(350px, 800px);
+  }
+}
