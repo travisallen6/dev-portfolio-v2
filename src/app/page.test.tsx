@@ -3,25 +3,15 @@ import { render, screen } from '@testing-library/react';
 import Home from './page';
 
 describe('Home', () => {
-  it('renders the main heading', () => {
+  it('renders the main section', () => {
     render(<Home />);
-    const heading = screen.getByRole('heading', {
-      name: /Hi! I'm Travis Allen/i,
-    });
-    expect(heading).toBeInTheDocument();
+    const mainSection = screen.getByRole('main');
+    expect(mainSection).toBeInTheDocument();
   });
 
-  it('renders the description', () => {
+  it('renders the Landing component', () => {
     render(<Home />);
-    const description = screen.getByText(
-      /I'm a backend and full stack software engineer/i
-    );
-    expect(description).toBeInTheDocument();
-  });
-
-  it('renders the footer', () => {
-    render(<Home />);
-    const footer = screen.getByText(/Built with ❤️ by Travis Allen/i);
-    expect(footer).toBeInTheDocument();
+    const landingComponent = screen.getByTestId('landing-section');
+    expect(landingComponent).toBeInTheDocument();
   });
 });

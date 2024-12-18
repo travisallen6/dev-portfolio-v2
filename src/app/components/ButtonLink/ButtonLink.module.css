@@ -1,0 +1,37 @@
+.buttonlink {
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  font-family: var(--font-kanit);
+  font-weight: 400;
+}
+
+.buttonlink__outline {
+  background-color: transparent;
+}
+
+.buttonlink__filled.buttonlink__primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-paragraph);
+}
+
+.buttonlink__outline.buttonlink__primary {
+  border: 5px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.buttonlink__filled.buttonlink__secondary {
+  background-color: var(--color-primary);
+  color: var(--color-text-paragraph);
+}
+
+.buttonlink__outline.buttonlink__secondary {
+  border: 5px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+@media screen and (max-width: 550px) {
+  .buttonlink {
+    font-size: 1.3rem;
+  }
+}

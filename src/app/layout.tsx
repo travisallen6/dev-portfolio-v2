@@ -8,13 +8,13 @@ import NavBar from './components/NavBar/NavBar';
 const kanit = Kanit({
   variable: '--font-kanit',
   subsets: ['latin-ext'],
-  weight: ['100'],
+  weight: ['100', '300', '400'],
 });
 
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin-ext'],
-  weight: ['100', '300'],
+  weight: ['100', '300', '400', '500'],
 });
 
 export const metadata: Metadata = {
